@@ -1,0 +1,12 @@
+* =====================================================================
+* demo_models_level1.lib  --  TOY level-1 MOSFET models (~180 nm-ish)
+*
+* ONLY for checking that the netlists run and the scripts work.
+* The delays they give are NOT real silicon numbers. For the numbers you
+* quote in an interview, use real models: the generic process models that
+* ship with your Tanner install, or the PTM 180 nm BSIM models.
+* =====================================================================
+.model nch nmos (level=1 vto=0.45  kp=170u gamma=0.4 phi=0.8 lambda=0.08
++ tox=4n cgso=3e-10 cgdo=3e-10 cgbo=1e-10 cj=1e-3 cjsw=2e-10)
+.model pch pmos (level=1 vto=-0.45 kp=60u  gamma=0.4 phi=0.8 lambda=0.10
++ tox=4n cgso=3e-10 cgdo=3e-10 cgbo=1e-10 cj=1e-3 cjsw=2e-10)
